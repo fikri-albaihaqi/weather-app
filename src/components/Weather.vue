@@ -26,7 +26,7 @@ export default {
 <template>
   <div
     v-if="weatherData.length !== 0"
-    class="flex justify-between items-center text-white w-[90%]"
+    class="flex justify-between items-center text-white w-[90%] mt-32"
   >
     <div>
       <h3 class="flex mt-8 text-xl">

@@ -17,6 +17,12 @@ module.exports = {
         'thunderstorm': "url('./src/assets/thunderstorm.jpg')",
         'snow': "url('./src/assets/snow.jpg')",
         'mist': "url('./src/assets/mist.jpg')",
+        'haze': "url('./src/assets/haze.jpg')",
+        'smoke': "url('./src/assets/smoke.jpg')",
+        'dust': "url('./src/assets/dust.jpg')",
+        'ash': "url('./src/assets/ash.jpg')",
+        'squalls': "url('./src/assets/squalls.jpg')",
+        'tornado': "url('./src/assets/tornado.jpg')",
       },
       fontFamily: {
         'rubik': ['Rubik', 'sans-serif'],

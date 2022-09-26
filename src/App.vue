@@ -36,16 +36,34 @@ export default {
       ? 'bg-scattered-clouds'
       : weatherCondition === 'broken clouds'
       ? 'bg-broken-clouds'
-      : weatherCondition === 'thunderstorm'
+      : weatherCondition.includes('drizzle')
+      || weatherCondition.includes('rain')
+      ? 'bg-shower-rain'
+      : weatherCondition.includes('thunderstorm') === 'thunderstorm'
       ? 'bg-thunderstorm'
       : weatherCondition === 'overcast clouds'
       ? 'bg-overcast-clouds'
-      : weatherCondition === 'snow'
+      : weatherCondition.includes('snow')
+      || weatherCondition.includes('sleet')
       ? 'bg-snow'
       : weatherCondition === 'mist'
+      || weatherCondition === 'fog'
       ? 'bg-mist'
-      : 'bg-red',
-  ]" class="h-screen bg-few-clouds bg-cover font-rubik">
+      : weatherCondition === 'haze'
+      ? 'bg-haze'
+      : weatherCondition === 'smoke'
+      ? 'bg-smoke'
+      : weatherCondition.includes('dust')
+      || weatherCondition.includes('sand')
+      ? 'bg-dust'
+      : weatherCondition.includes('ash')
+      ? 'bg-ash'
+      : weatherCondition === 'squalls'
+      ? 'bg-squalls'
+      : weatherCondition === 'tornado'
+      ? 'bg-tornado'
+      : 'bg-clear-sky',
+  ]" class="h-screen bg-blue bg-cover font-rubik">
     <div class="flex flex-col items-center pt-12">
       <div class="flex">
         <input v-model="city" @keyup.enter="searchCity(city)" class="
