@@ -5,12 +5,6 @@ export default {
     weatherData: Object,
   },
   methods: {
-    convertToCelcius() {
-      let celcius = (5 / 9) * (this.weatherData.data.main.temp - 32);
-      celcius = celcius.toFixed(0);
-
-      return celcius;
-    },
     upperCaseFirstLetter() {
       const sentence = this.weatherData.data.weather[0].description;
       const finalSentence = sentence.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
@@ -34,7 +28,8 @@ export default {
         {{ weatherData.data.name }}
       </h3>
 
-      <h1 class="text-9xl">{{ convertToCelcius() }}°</h1>
+      <h1 class="text-9xl">{{ weatherData.data.main.temp.toFixed(0) }}°</h1>
+      <h2 class="flex"><span class="material-symbols-outlined mx-1">air</span> {{ weatherData.data.wind.speed }}m/s</h2>
     </div>
     <div>
       <h3 class="-rotate-90">

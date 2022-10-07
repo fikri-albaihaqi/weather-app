@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     async searchCity(city) {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=895284fb2d2c50a520ea537456963d9c`;
 
       this.response = await axios.get(url);
       this.weatherCondition = this.response.data.weather[0].description;
